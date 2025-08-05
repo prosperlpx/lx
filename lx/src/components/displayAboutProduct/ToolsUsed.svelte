@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy } from "svelte";
   import cssLogo from "../../assets/tools/cssLogo.png";
-  import figmalogo from "../../assets/tools/figmalogo.png";
+  import figmalogo from "../../assets/tools/figmaLogo.png";
   import php_logo from "../../assets/tools/php_logo.png";
   import svelte_logo from "../../assets/tools/svelte_logo.png";
   import react_logo from "../../assets/tools/react_logo.png";
