@@ -5,7 +5,6 @@
   import Contact from "./components/Contact.svelte";
   import Footer from "./components/Footer.svelte";
   import {
-    mainColor,
     bgColor,
     mainTxtColor,
     isDarkMode,
@@ -27,17 +26,14 @@
 
   function toggleMode() {
     isDarkMode.update((mode) => !mode);
-    console.log($isDarkMode);
     if ($isDarkMode) {
       bgColor.set("bg-black");
       mainTxtColor.set("text-white");
       heroHeadingTxtCol.set("text-white");
-      console.log($bgColor);
     } else if (!$isDarkMode) {
       bgColor.set("bg-white");
       mainTxtColor.set("text-black");
       heroHeadingTxtCol.set("text-[#000000d5]");
-      console.log($bgColor);
     }
   }
   // setting dark or light mode
