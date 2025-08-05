@@ -1,47 +1,55 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  import Navbar from "./components/Navbar.svelte";
+  import Hero from "./components/Hero.svelte";
+  import Cost from "./components/Cost.svelte";
+  import Contact from "./components/Contact.svelte";
+  import Footer from "./components/Footer.svelte";
+  import {
+    mainColor,
+    bgColor,
+    mainTxtColor,
+    isDarkMode,
+    heroHeadingTxtCol,
+  } from "./lib/Stores";
+  import AboutUs from "./components/AboutUs.svelte";
+
+  let initial = "";
+  const change = [
+    // "Web Apps..",
+    "Landing Pages..",
+    "AI Powered Apps..",
+    "Web Services..",
+    // "Mobile Apps..",
+    // "and More..",
+  ];
+  let index = 0;
+  let intervalId;
+
+  function toggleMode() {
+    isDarkMode.update((mode) => !mode);
+    console.log($isDarkMode);
+    if ($isDarkMode) {
+      bgColor.set("bg-black");
+      mainTxtColor.set("text-white");
+      heroHeadingTxtCol.set("text-white");
+      console.log($bgColor);
+    } else if (!$isDarkMode) {
+      bgColor.set("bg-white");
+      mainTxtColor.set("text-black");
+      heroHeadingTxtCol.set("text-[#000000d5]");
+      console.log($bgColor);
+    }
+  }
+  // setting dark or light mode
 </script>
 
-<main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+<main class={`${$bgColor} min-h-screen`}>
+  <!-- there should be tools used to build:
+include figma, browsers, html, css, javascript, svelte, react, php, more... -->
+  <Navbar {toggleMode} />
+  <Hero {index} {intervalId} {change} {initial} />
+  <AboutUs />
+  <Cost />
+  <Contact />
+  <Footer />
 </main>
-
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>
