@@ -27,7 +27,11 @@
     </li>
 
     <li class="bg-white p-2 rounded-2xl mx-auto">
-      <a href="#contact">
+      <a
+        href="https://discord.gg/q4fX7rf4"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <img src={discord} alt="discord" class="w-10" />
       </a>
     </li>
