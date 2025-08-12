@@ -28,7 +28,12 @@
             For a full fledged web app, services, mobile apps and more. The cost
             vary speak with us on discord:
           </p>
-          <a href="#discord link here" class="text-blue-600 font-bold">
+          <a
+            href="https://discord.gg/q4fX7rf4"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="text-blue-600 font-bold"
+          >
             lapXpec ➚
           </a>
         </div>

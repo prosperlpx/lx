@@ -58,7 +58,7 @@
 
     <!-- the navigation for mobile -->
     <div class="sm:hidden flex items-center gap-3">
-      <div class="pt-4">
+      <div class="pt-2">
         {#if !$isDarkMode}
           <button
             class="cursor-pointer bg-white p-1 rounded-lg"
