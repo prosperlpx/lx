@@ -14,7 +14,11 @@
         <a href="mailto:lapXpec@gmail.com">lapXpec@gmail.com</a>
         <br />
         Discord:
-        <a href="#discord link here">lapXpec</a>
+        <a
+          href="https://discord.gg/q4fX7rf4"
+          rel="noopener noreferrer"
+          target="_blank">lapXpec</a
+        >
       </p>
     </div>
 

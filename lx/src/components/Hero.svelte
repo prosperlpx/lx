@@ -88,7 +88,11 @@
   <!-- this redirects to our discord server where you attend to clients and give  -->
 
   {#if $isOpenMenu}
-    <a href="https://discord.gg/q4fX7rf4">
+    <a
+      href="https://discord.gg/q4fX7rf4"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
       <img
         src={$isOpenMenu && discord}
         alt={$isOpenMenu ? "discord" : ""}
