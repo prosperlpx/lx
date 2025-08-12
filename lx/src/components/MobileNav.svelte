@@ -1,12 +1,19 @@
 <script>
   import { bgColor, mainTxtColor } from "../lib/Stores";
+  import { isOpenMenu } from "../lib/Stores.js";
   import discord from "../assets/discord.png";
+
+  const closeMenu = () => isOpenMenu && isOpenMenu.update((menu) => !menu);
 </script>
 
-<main
+<button
   class={`absolute left-0 min-h-screen min-w-screen top-17 ${$bgColor} ${$mainTxtColor} overflow-hidden`}
+  onclick={closeMenu}
 >
-  <ul class="flex flex-col text-center mt-32 text-6xl font-bold space-y-14">
+  <ul class="flex flex-col text-center text-6xl font-bold space-y-10">
+    <li>
+      <a href="#home">Home</a>
+    </li>
     <li>
       <a href="#about">About</a>
     </li>
@@ -25,4 +32,4 @@
       </a>
     </li>
   </ul>
-</main>
+</button>

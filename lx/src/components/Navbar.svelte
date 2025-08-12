@@ -17,13 +17,15 @@
     class="flex max-w-4xl mx-auto items-center gap-12 justify-between py-3 px-6"
   >
     <!-- the logo image and text -->
-    <a
-      href="#home"
-      class="flex items-center text-2xl sm:text-4xl font-bold gap-2 w-fit"
-    >
-      <img src={lapxpec_logo} alt="lapxpec_logo" class="w-10" />
-      <h2>LapXpec.</h2>
-    </a>
+    <div>
+      <a
+        href="#home"
+        class="flex items-center text-2xl sm:text-4xl font-bold gap-2 w-fit"
+      >
+        <img src={lapxpec_logo} alt="lapxpec_logo" class="w-10" />
+        <h2>LapXpec.</h2>
+      </a>
+    </div>
 
     <!-- the navigation for desktop -->
     <ul
@@ -40,11 +42,14 @@
       <li class="flex items-center gap-6">
         <a href="#contact">Contact Us</a>
         {#if !$isDarkMode}
-          <button class="cursor-pointer" onclick={toggleMode}>
+          <button
+            class="cursor-pointer bg-white p-1 rounded-lg"
+            onclick={toggleMode}
+          >
             <img src={brightness} alt="discord_logo" class="w-6" />
           </button>
         {:else}
-          <button class="cursor-pointer" onclick={toggleMode}>
+          <button class="cursor-pointer p-1" onclick={toggleMode}>
             <img src={darkness} alt="discord_logo" class="w-6" />
           </button>
         {/if}
@@ -55,11 +60,14 @@
     <div class="sm:hidden flex items-center gap-3">
       <div class="pt-4">
         {#if !$isDarkMode}
-          <button class="cursor-pointer" onclick={toggleMode}>
+          <button
+            class="cursor-pointer bg-white p-1 rounded-lg"
+            onclick={toggleMode}
+          >
             <img src={brightness} alt="discord_logo" class="w-6" />
           </button>
         {:else}
-          <button class="cursor-pointer" onclick={toggleMode}>
+          <button class="cursor-pointer p-1" onclick={toggleMode}>
             <img src={darkness} alt="discord_logo" class="w-6" />
           </button>
         {/if}

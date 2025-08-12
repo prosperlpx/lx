@@ -14,7 +14,7 @@
 </script>
 
 <div class="py-6">
-  <h2 class="text-white font-bold text-center text-3xl">Tools Used</h2>
+  <h2 class="text-white font-bold text-center text-3xl">Tools Used 🛠</h2>
   <div
     class="slider-wrapper relative overflow-hidden w-[14rem] sm:w-[30rem] mx-auto m-4 rounded-full"
   >

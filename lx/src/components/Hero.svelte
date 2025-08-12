@@ -52,7 +52,7 @@
 <main class="mx-auto max-w-4xl overflow-hidden">
   <section
     id="home"
-    class="mt-16 sm:mt-12 flex scroll-mt-40 flex-col-reverse items-center justify-between gap-12 p-6 sm:flex-row"
+    class="mt-16 sm:mt-24 flex scroll-mt-40 flex-col-reverse items-center justify-between gap-12 p-6 sm:flex-row"
     in:scale={{ duration: 500 }}
     out:scale={{ duration: 500 }}
   >
@@ -72,7 +72,7 @@
         class={`${$mainTxtColor} text-[16px] sm:text-xl text-center sm:text-left py-4 space-y-2`}
       >
         We help walk you through the hastle of designing and development.<br
-        /><span class="text-[#098F90]">Make your project live with us! 🫶</span>
+        /><span class="text-[#07a4a4]">Make your project live with us! 🫶</span>
       </p>
     </div>
 
@@ -88,11 +88,13 @@
   <!-- this redirects to our discord server where you attend to clients and give  -->
 
   {#if $isOpenMenu}
-    <img
-      src={$isOpenMenu && discord}
-      alt={$isOpenMenu ? "discord" : ""}
-      class={`fixed w-8 h-8 sm:w-10 sm:h-10 z-20 bg-white p-1 rounded-full top-142 sm:right-4 sm:top-138 lg:right-32 lg:top-130 ml-3 sm:ml-0 cursor-pointer`}
-    />
+    <a href="https://discord.gg/q4fX7rf4">
+      <img
+        src={$isOpenMenu && discord}
+        alt={$isOpenMenu ? "discord" : ""}
+        class={`fixed w-8 h-8 sm:w-10 sm:h-10 z-20 bg-white p-1 rounded-full top-142 sm:right-4 sm:top-138 lg:right-32 lg:top-130 ml-3 sm:ml-0 cursor-pointer`}
+      />
+    </a>
   {:else}
     {""}
   {/if}

@@ -11,7 +11,7 @@
       <h2 class={`text-2xl text-black font-medium`}>LapXpec.</h2>
       <p class="text-sm">
         Email:
-        <a href="mailto:inquiries@acmerockets.com">lapXpec@gmail.com</a>
+        <a href="mailto:lapXpec@gmail.com">lapXpec@gmail.com</a>
         <br />
         Discord:
         <a href="#discord link here">lapXpec</a>
